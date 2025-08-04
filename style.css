@@ -720,123 +720,65 @@ h5{
     /* position: relative; */
     /* margin-right: 10rem; */
 }
-/* =========================
-   📱 Media Queries for Mobile
-   ========================= */
 @media (max-width: 768px) {
-  /* Make container stack vertically */
-  .container {
-    flex-direction: column;
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
   }
 
-  /* All main columns full-width */
+  * {
+    box-sizing: border-box;
+    max-width: 100% !important;
+  }
+
+  .container,
   .col-m3,
   .col-m7,
-  .Right-Column {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-  }
-
-  /* Fix profile section */
-  .My-profile,
-  .interest,
-  .hide,
-  .hey {
-    width: 100% !important;
-  }
-
-  /* Resize list-menu buttons for mobile */
-  .list-menu {
-    flex-wrap: wrap;
-    padding: 0.5rem;
-  }
-
-  .btn1,
-  .btn2,
-  .btn3 {
-    width: auto;
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .right-menu img {
-    margin: 0.5rem;
-    height: 1.8rem;
-    width: 1.8rem;
-  }
-
-  /* Photos grid adjust */
-  .photos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .photos-half {
-    padding: 5px;
-    width: 100% !important;
-  }
-
-  .photos-half img {
-    width: 100% !important;
-    height: auto;
-  }
-
-  /* Post sections */
+  .Right-Column,
   .john-box1,
   .jane-doe,
   .Anjie-jane,
-  .social-media-box {
-    width: 95% !important;
+  .Request-form,
+  .ADS-box,
+  .upcoming-events,
+  .bug-box,
+  #foot,
+  #powerby {
+    width: 100% !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
-  /* Upcoming events and friend request boxes */
-  .upcoming-events,
-  .Request-form,
-  .ADS-box,
-  .bug-box {
+  .container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .list-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .btn1, .btn2, .btn3 {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .photos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .photos-half img {
     width: 100% !important;
-    margin-left: auto;
-    margin-right: auto;
+    height: auto !important;
   }
 
-  #foot,
-  #powerby {
-    width: 100% !important;
-  }
-
-  .john-logo .john-time,
-  .jane-time,
-  .Anjie-time {
-    margin-left: auto;
-  }
-
-  /* Reduce paragraph padding on small screens */
   p {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
-@media (max-width: 768px) {
-  /* Remove horizontal overflow */
-  body, html {
-    overflow-x: hidden;
-  }
-
-  /* Fix any fixed width causing right gap */
-  * {
-    max-width: 100% !important;
-  }
-
-  /* Remove hardcoded widths */
-  #foot,
-  #powerby,
-  .social-media-box,
-  .john-box1,
-  .jane-doe,
-  .Anjie-jane {
-    width: 100% !important;
-  }
-}
-
