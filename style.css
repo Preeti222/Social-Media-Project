@@ -720,9 +720,9 @@ h5{
     /* position: relative; */
     /* margin-right: 10rem; */
 }
-/* ---------------- Responsive Media Queries ---------------- */
+/* ---------------- FULLY RESPONSIVE MEDIA QUERIES ---------------- */
 
-/* For phones: up to 767px */
+/* 📱 Mobile screens (up to 767px) */
 @media (max-width: 767px) {
   .container {
     flex-direction: column;
@@ -730,27 +730,40 @@ h5{
 
   .col-m3,
   .col-m7,
-  .Right-Column {
-    width: 100%;
-    float: none;
-    margin: 0;
-    padding: 0 1rem;
+  .Right-Column,
+  .My-profile,
+  .interest,
+  .hide,
+  .social-media-box,
+  .john-box1,
+  .jane-doe,
+  .Anjie-jane,
+  .Request-form,
+  .upcoming-events,
+  .ADS-box,
+  .bug-box {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 auto 1rem auto;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 
   .list-menu {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1rem;
     height: auto;
-    padding: 0.5rem;
   }
 
   .left {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
+    padding-left: 0;
   }
 
   .right-menu img {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
   }
 
   .john-pictures {
@@ -763,12 +776,38 @@ h5{
   }
 
   .photos-half {
-    width: 100%;
+    width: 100% !important;
     padding: 0.5rem 0;
   }
 
-  .interest,
+  .media-box,
+  .box-border {
+    width: 100% !important;
+  }
+
+  .Request-form-buttton {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #foot,
+  #powerby {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+/* 💻 Tablets and small laptops (768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .col-m3,
+  .col-m7,
+  .Right-Column,
   .My-profile,
+  .interest,
   .hide,
   .social-media-box,
   .john-box1,
@@ -777,11 +816,32 @@ h5{
   .Request-form,
   .upcoming-events,
   .ADS-box,
-  .bug-box,
-  #foot,
-  #powerby {
+  .bug-box {
     width: 100% !important;
-    margin: 0 auto;
+    float: none !important;
+    margin: 0 auto 1rem auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .john-pictures {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .john-pictures .picture {
+    width: 48%;
+    margin: 0;
+  }
+
+  .photos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photos-half {
+    width: 100%;
+    padding: 0.5rem 0;
   }
 
   .media-box,
@@ -789,52 +849,20 @@ h5{
     width: 100% !important;
   }
 
-  .john-time,
-  .jane-time,
-  .Anjie-time {
-    margin-left: auto;
+  .Request-form-buttton {
+    justify-content: center;
+    gap: 1rem;
   }
 
-  .Request-form-buttton {
-    flex-direction: column;
-    align-items: center;
+  #foot,
+  #powerby {
+    width: 100% !important;
+    text-align: center;
   }
 }
 
-/* For tablets: 768px to 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .col-m3,
-  .col-m7,
-  .Right-Column {
-    width: 100%;
-    float: none;
-    margin: 0;
-    padding: 0 1rem;
-  }
-
-  .photos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .john-pictures {
-    flex-wrap: wrap;
-  }
-
-  .john-pictures .picture {
-    width: 48%;
-  }
-
-  .Request-form-buttton {
-    justify-content: space-between;
-  }
-}
-
-/* For desktops: 1024px and above */
-@media (min-width: 1024px) {
+/* 🖥️ Desktop (1200px and above) */
+@media (min-width: 1200px) {
   .container {
     flex-direction: row;
   }
