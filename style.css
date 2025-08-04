@@ -818,3 +818,25 @@ h5{
     padding-right: 10px;
   }
 }
+@media (max-width: 768px) {
+  /* Remove horizontal overflow */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* Fix any fixed width causing right gap */
+  * {
+    max-width: 100% !important;
+  }
+
+  /* Remove hardcoded widths */
+  #foot,
+  #powerby,
+  .social-media-box,
+  .john-box1,
+  .jane-doe,
+  .Anjie-jane {
+    width: 100% !important;
+  }
+}
+
